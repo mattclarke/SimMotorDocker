@@ -1,5 +1,5 @@
 # SimMotorDocker
-Docker file for creating the [SimMotor](https://github.com/mattclarke/SimMotor)
+Docker file for creating the [SimMotor](https://github.com/mattclarke/SimMotor).
 
 To build the image:
 ```
