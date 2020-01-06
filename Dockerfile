@@ -33,7 +33,7 @@ RUN cd /opt/epics/base && make \
 
 # Download SimMotor from git and build it
 RUN mkdir /opt/epics/iocs \
-    && git clone https://github.com/mattclarke/SimMotor.git /opt/epics/iocs/SimMotor
+    && git clone https://github.com/mattclarke/SimMotor.git /opt/epics/iocs/SimMotor \
     && cd /opt/epics/iocs/SimMotor && make
 
 # Expose the standard EPICS ports
