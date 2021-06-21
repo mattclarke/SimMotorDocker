@@ -10,19 +10,19 @@ RUN apt-get update \
     && apt-get install -yq git
 
 # Download EPICS base
-RUN wget --quiet https://epics.anl.gov/download/base/base-3.15.5.tar.gz \
-    && tar xvzf base-3.15.5.tar.gz \
+RUN wget --quiet https://epics.anl.gov/download/base/base-7.0.5.tar.gz \
+    && tar xvzf base-7.0.5.tar.gz \
     && mkdir /opt/epics \
-    && mv base-3.15.5 /opt/epics/base \
-    && rm base-3.15.5.tar.gz 
+    && mv base-7.0.5 /opt/epics/base \
+    && rm base-7.0.5.tar.gz 
 
 # Download ASYN
-RUN wget --quiet https://www.aps.anl.gov/epics/download/modules/asyn4-33.tar.gz \
-    && tar xvzf asyn4-33.tar.gz \
+RUN wget --quiet https://epics.anl.gov/download/modules/asyn4-38.tar.gz \
+    && tar xvzf asyn4-38.tar.gz \
     && mkdir /opt/epics/modules  \
-    && mv asyn4-33 asyn \
+    && mv asyn4-38 asyn \
     && mv asyn /opt/epics/modules \
-    && rm asyn4-33.tar.gz
+    && rm asyn4-38.tar.gz
     
 # Copy in custom RELEASE file
 COPY files/RELEASE /opt/epics/modules/asyn/configure/.
